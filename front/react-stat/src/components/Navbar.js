@@ -15,7 +15,7 @@ const Navbar = () => {
         <Link to="/">Home</Link>
       </Menu.Item>
       <Menu.Item key="/senddata">
-        <Link to="/senddata">Send Data</Link>
+        <Link to="/senddata">Парсинг демок</Link>
       </Menu.Item>
       {/* Дополнительные ссылки */}
       <Menu.Item key="/creatematch">
