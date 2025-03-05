@@ -15,11 +15,11 @@ const Navbar = () => {
         <Link to="/">Home</Link>
       </Menu.Item>
       <Menu.Item key="/senddata">
-        <Link to="/senddata">Парсинг демок</Link>
+        <Link to="/senddata">Parse demo</Link>
       </Menu.Item>
       {/* Дополнительные ссылки */}
       <Menu.Item key="/creatematch">
-        <Link to="/creatematch">Creatematch</Link>
+        <Link to="/creatematch">Create match</Link>
       </Menu.Item>
       <Menu.Item key="/contact">
         <Link to="/contact">Contact</Link>
