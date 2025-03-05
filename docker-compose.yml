@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+
+  back:
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+    container_name: back
+    # Пробрасываем порт 5005 наружу
+    ports:
+      - "5005:5005"
+    # Если нужно, чтобы Python-сервис мог читать файлы прямо с хоста, можно добавить volume
+    # volumes:
+    #   - ./back:/app
+    # Зависимости от других сервисов (если нужно), но тут не обязательно
+    # depends_on:
+    #   - db
+
+  front:
+    build:
+      context: ./front/react-stat
+      dockerfile: Dockerfile
+    container_name: front
+    # Для варианта c Nginx:
+    # - мапим локальный порт 3005 на 80 в контейнере с Nginx
+    ports:
+      - "3005:80"
+    depends_on:
+      - back

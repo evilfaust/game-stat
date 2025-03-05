@@ -1,0 +1,31 @@
+import React from 'react';
+import { Menu } from 'antd';
+import { Link, useLocation } from 'react-router-dom';
+
+const Navbar = () => {
+  const location = useLocation();
+
+  return (
+    <Menu
+      mode="horizontal"
+      selectedKeys={[location.pathname]}
+      style={{ display: 'flex', justifyContent: 'center' }}
+    >
+      <Menu.Item key="/">
+        <Link to="/">Home</Link>
+      </Menu.Item>
+      <Menu.Item key="/senddata">
+        <Link to="/senddata">Send Data</Link>
+      </Menu.Item>
+      {/* Дополнительные ссылки */}
+      <Menu.Item key="/creatematch">
+        <Link to="/creatematch">Creatematch</Link>
+      </Menu.Item>
+      <Menu.Item key="/contact">
+        <Link to="/contact">Contact</Link>
+      </Menu.Item>
+    </Menu>
+  );
+};
+
+export default Navbar;

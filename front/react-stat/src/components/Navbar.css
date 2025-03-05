@@ -1,0 +1,64 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .desktop-menu {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .mobile-menu-button {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .desktop-menu {
+      display: none;
+    }
+    .mobile-menu-button {
+      display: block;
+    }
+  }
+  
+  .nav-bar-btn {
+    color: #FEA202;
+    font-size: 1.2rem;
+  }
+  
+  .nav-bar-btn:hover {
+    border-color: #FEA202;
+    color: #FFFFFF !important; /* White text on hover */
+  }
+  
+  /* Active button styles */
+  .nav-bar-btn.active {
+    border-color: #FEA202;
+    color: #FFFFFF;
+    box-shadow: 0 0 0 2px rgba(254, 162, 2, 0.2);
+  }
+  
+  /* Drawer menu button hover effects */
+  .ant-drawer .ant-btn:hover {
+    color: #FFFFFF !important;
+    border-color: #FEA202;
+  }
+  
+  .ant-drawer .ant-btn.active {
+    color: #FFFFFF !important;
+    border-color: #FEA202;
+    box-shadow: 0 0 0 2px rgba(254, 162, 2, 0.2);
+  }
+  
+  
