@@ -149,7 +149,7 @@ if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['MAX_CONTENT_LENGTH'] = 500 * 1024 * 1024  # 500 МБ
+app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024  # 1024 МБ
 
 def get_current_time_formatted():
     """Возвращает текущее время в формате 'Год-Месяц-День_Часы-Минуты-Секунды'."""
